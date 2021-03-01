@@ -3,39 +3,43 @@ $("#currentDay").text(moment().format("ddd MMMM do, YYYY"));
 
 var hours = [
     {
-        hour: 9
-
+        hour: "9AM",
+        description: "",
     },
     {
-        hour: 10
-
+        hour: "10AM",
+        description: "",
     },
     {
-        hour: 11
-
+        hour: "11AM",
+        description: "",
     },
     {
-        hour: 12
-
+        hour: "12PM",
+        description: "",
     },    
     {
-        hour: 1
-
+        hour: "1PM",
+        description: "",
     },    
     {
-        hour: 2
-
+        hour: "2PM",
+        description: "",
     },    
     {
-        hour: 3
-
+        hour: "3PM",
+        description: "",
     },
     {
-        hour: 4
-
+        hour: "4PM",
+        description: "",
     },
     {
-        hour: 5
-
+        hour: "5PM",
+        description: "",
     }
-]
+];
+
+
+
+//saveddescriptions = JSON.parse(localStorage.getItem(""))
