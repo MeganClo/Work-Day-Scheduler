@@ -1,7 +1,10 @@
 // adding the current day
 $("#currentDay").text(moment().format("ddd MMMM do, YYYY"));
 
-var hours = [
+//getting current hour 
+moment().format('hh');
+
+var blocks = [
     {
         hour: "9AM",
         description: "",
@@ -40,6 +43,10 @@ var hours = [
     }
 ];
 
+
+function saveDescriptions() {
+    localStorage.setItem("blocks", JSON.stringify(blocks));
+}
 
 
 //saveddescriptions = JSON.parse(localStorage.getItem(""))
