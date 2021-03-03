@@ -43,10 +43,15 @@ var blocks = [
     }
 ];
 
-
+//saves data to local storage
 function saveDescriptions() {
     localStorage.setItem("blocks", JSON.stringify(blocks));
-}
+};
+
+//
+saveDescriptions();
+
+
 
 
 //saveddescriptions = JSON.parse(localStorage.getItem(""))
