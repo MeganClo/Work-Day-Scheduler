@@ -5,7 +5,8 @@ $("#currentDay").text(moment().format("ddd MMMM do, YYYY"));
 moment().format('HH');
 
 // checking time blocks to see if they're in the past, present, or future and assigning the appropriate class
-$(".time-block").each(function() {
+var checkingTime = function(){
+    $(".time-block").each(function() {
     var hourBlock = $(this).attr("id");
     console.log(hourBlock, moment().format('HH'))
 
@@ -16,47 +17,22 @@ $(".time-block").each(function() {
     } else {
         $(this).addClass("future");
     }
+})};
+
+// getting values into variables to save to local storage
+ $(".saveBtn").click(function() {
+    var description = $(this).siblings(".description").val();
+    var timeBlock = $(this).parent().attr("id");
+    localStorage.setItem( timeBlock, description);
+    console.log(timeBlock);
+    console.log(description);
 });
 
-// $(".saveBtn").click(function() {
-//     var description = $.trim($(".description").val());
-//     console.log(description);
-// });
+// running the checkingtime function every 15 minutes to update color blocks if needed
+setInterval(function(){
+    checkingTime();
+}, 900000);
 
- $(".saveBtn").click(function() {
-    var desciption = $(this).siblings(".description").val();
-    var timeBlock = $(this).parent().attr("id");
-    console.log(timeBlock);
-    console.log(desciption);
-})
-
-//    var description = $.trim($(".description").val());
-//     console.log(description);
-// });
+checkingTime();
 
 
-
-//saves data to local storage
-//function saveDescriptions() {
-//    localStorage.setItem("blocks", JSON.stringify(blocks));
-//};
-
-//var newBlocks = JSON.parse(localStorage.getItem("blocks"));
-
-//console.log(newBlocks);
-
-//newBlocks.forEach(function(rows) {
-//    $(".container").append("<div class='row time-block'></div>");
-//    $(".row").append()
-//})
-
-//$(".container").append("<div class='row time-block'></div>");
-//    $(".container").append("<div class='row time-block'></div>");
-//});
-//moment().format('hh')===newBlocks[2].time;
-//saveDescriptions();
-
-
-
-
-//saveddescriptions = JSON.parse(localStorage.getItem(""))
