@@ -24,9 +24,19 @@ var checkingTime = function(){
     var description = $(this).siblings(".description").val();
     var timeBlock = $(this).parent().attr("id");
     localStorage.setItem( timeBlock, description);
-    console.log(timeBlock);
-    console.log(description);
+//    console.log(timeBlock);
+//    console.log(description);
 });
+
+var getting = function() {
+    var block = localStorage.getItem("09");
+    console.log(block);
+    $("#09").children("textarea").val() = block;
+};
+
+
+
+
 
 // running the checkingtime function every 15 minutes to update color blocks if needed
 setInterval(function(){
@@ -34,5 +44,4 @@ setInterval(function(){
 }, 900000);
 
 checkingTime();
-
-
+getting();
