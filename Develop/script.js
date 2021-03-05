@@ -2,11 +2,15 @@
 $("#currentDay").text(moment().format("ddd MMMM do, YYYY"));
 
 //getting current hour 
-moment().format('hh');
+moment().format('HH');
 
 $(".time-block").each(function() {
     var hourBlock = $(this).attr("id");
-    console.log(hourBlock)
+    console.log(hourBlock, moment().format('HH'))
+
+    if (hourBlock < moment().format('HH')) {
+        $(this).addClass("past");
+    }
 });
 
 //saves data to local storage
