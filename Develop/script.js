@@ -57,10 +57,14 @@ function saveDescriptions() {
     localStorage.setItem("blocks", JSON.stringify(blocks));
 };
 
-var newBlocks = JSON.parse(localStorage.getItem("blocks") || []);
+var newBlocks = JSON.parse(localStorage.getItem("blocks"));
 
+console.log(newBlocks);
 
-//
+$(".container").append("<div class='row time-block'></div>");
+//    $(".container").append("<div class='row time-block'></div>");
+//});
+//moment().format('hh')===newBlocks[2].time;
 saveDescriptions();
 
 
