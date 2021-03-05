@@ -4,12 +4,17 @@ $("#currentDay").text(moment().format("ddd MMMM do, YYYY"));
 //getting current hour 
 moment().format('HH');
 
+// checking time blocks to see if they're in the past, present, or future
 $(".time-block").each(function() {
     var hourBlock = $(this).attr("id");
     console.log(hourBlock, moment().format('HH'))
 
     if (hourBlock < moment().format('HH')) {
         $(this).addClass("past");
+    } else if (hourBlock === moment().format('HH')) {
+        $(this).addClass("present");
+    } else {
+        $(this).addClass("future");
     }
 });
 
