@@ -31,7 +31,7 @@ var checkingTime = function(){
 var getting = function() {
     var block = localStorage.getItem("09");
     console.log(block);
-    $("#09").children("textarea").val() = block;
+    $("#09").children("textarea").val(block); 
 };
 
 
