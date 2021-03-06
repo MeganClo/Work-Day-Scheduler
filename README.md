@@ -10,7 +10,9 @@ A work day scheduler where each hour-block is color coded to indicate whether it
 
 ## Website
 https://meganclo.github.io/Work-Day-Scheduler/
-https://user-images.githubusercontent.com/77699944/110224275-e5282000-7e8e-11eb-875f-d063cd6113fe.jpg
+
+![Work Day Scheduler](https://user-images.githubusercontent.com/77699944/110224275-e5282000-7e8e-11eb-875f-d063cd6113fe.jpg)
+
 
 ## Contribution
 * original HTML and Bootstrap/CSS cloned from Xander Rapstine
