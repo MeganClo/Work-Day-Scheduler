@@ -1,9 +1,8 @@
-// adding the current day
+// adding the current day to header
 $("#currentDay").text(moment().format("ddd MMMM do, YYYY"));
 
-//getting current hour in the format that matches my id's for time-blocks. 
-//moment().format('HH');
-
+// getting current hour in the format that matches my id's for time-blocks. 
+// moment().format('HH');
 
 // checking time blocks to see if they're in the past, present, or future and assigning the appropriate class
 var checkingTime = function(){
@@ -43,14 +42,10 @@ var getting = function() {
     $("#17").children("textarea").val(localStorage.getItem("17"));
 };
 
-
-
-
-
-// running the checkingtime function every 15 minutes to update color blocks if needed
+// running the checkingtime function every 10 minutes to update color blocks if needed
 setInterval(function(){
     checkingTime();
-}, 900000);
+}, 600000);
 
 checkingTime();
 getting();
